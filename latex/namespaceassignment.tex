@@ -1,0 +1,188 @@
+\hypertarget{namespaceassignment}{}\doxysection{assignment Namespace Reference}
+\label{namespaceassignment}\index{assignment@{assignment}}
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+def \mbox{\hyperlink{namespaceassignment_a265f4da1e0c7b9855417b153cfd87fe8}{drive}} (speed, seconds)
+\item 
+def \mbox{\hyperlink{namespaceassignment_afdd9349189dc0608a633c33c1ba17da8}{turn}} (speed, seconds)
+\item 
+def \mbox{\hyperlink{namespaceassignment_a625b9cf7616f56689c7d8648dcfa9aba}{clear\+\_\+way}} (\mbox{\hyperlink{namespaceassignment_a1884445294b0aedfe08836aa7ea19252}{dist}}, \mbox{\hyperlink{namespaceassignment_ad8f2e5095821dac3a3036183a747ed95}{rot\+\_\+y}})
+\item 
+def \mbox{\hyperlink{namespaceassignment_aed9209d15cc296657fbbdef6941386b6}{find\+\_\+silver\+\_\+token}} ()
+\item 
+def \mbox{\hyperlink{namespaceassignment_ac14e6569325c1613b45935e5bfc43c15}{find\+\_\+golden\+\_\+token}} ()
+\item 
+def \mbox{\hyperlink{namespaceassignment_a3300ba47ab3de83b4c66c2234bb456c6}{find\+\_\+left\+\_\+wall}} ()
+\item 
+def \mbox{\hyperlink{namespaceassignment_a73cccb7e8a6845af27a1a9623c5fa137}{find\+\_\+right\+\_\+wall}} ()
+\item 
+def \mbox{\hyperlink{namespaceassignment_a364af5d38654c38291bfffc3871c8a67}{drive\+\_\+safely}} ()
+\end{DoxyCompactItemize}
+\doxysubsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+float \mbox{\hyperlink{namespaceassignment_aa8c1c156d2b500728d9bcf126bee8418}{a\+\_\+th}} = 2.\+0
+\item 
+float \mbox{\hyperlink{namespaceassignment_aff64926ea97a095c3bd1d0417bf65931}{d\+\_\+th}} = 0.\+4
+\item 
+bool \mbox{\hyperlink{namespaceassignment_ae8928035517b725fcb555ce1fa8445df}{silver}} = True
+\item 
+\mbox{\hyperlink{namespaceassignment_a8874ef1f98c9cb3cd40f36277cc217fa}{R}} = Robot()
+\item 
+\mbox{\hyperlink{namespaceassignment_a1884445294b0aedfe08836aa7ea19252}{dist}}
+\begin{DoxyCompactList}\small\item\em Here it is computed the main function \# A while loop where the robot detects silver token in the arena and \# then drive in a carefully way to them. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{namespaceassignment_ad8f2e5095821dac3a3036183a747ed95}{rot\+\_\+y}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Function Documentation}
+\mbox{\Hypertarget{namespaceassignment_a625b9cf7616f56689c7d8648dcfa9aba}\label{namespaceassignment_a625b9cf7616f56689c7d8648dcfa9aba}} 
+\index{assignment@{assignment}!clear\_way@{clear\_way}}
+\index{clear\_way@{clear\_way}!assignment@{assignment}}
+\doxysubsubsection{\texorpdfstring{clear\_way()}{clear\_way()}}
+{\footnotesize\ttfamily def assignment.\+clear\+\_\+way (\begin{DoxyParamCaption}\item[{}]{dist,  }\item[{}]{rot\+\_\+y }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}Function for detecting if there are golden boxes in a middle
+of a silver token's detection
+
+Args: dist(int) : distance retrieve by R.see()
+      rot_y (float) : angle between the robot and the silver token
+      
+Returns:
+    True: Golden boxes are in the middle
+    False: clear path
+\end{DoxyVerb}
+ \mbox{\Hypertarget{namespaceassignment_a265f4da1e0c7b9855417b153cfd87fe8}\label{namespaceassignment_a265f4da1e0c7b9855417b153cfd87fe8}} 
+\index{assignment@{assignment}!drive@{drive}}
+\index{drive@{drive}!assignment@{assignment}}
+\doxysubsubsection{\texorpdfstring{drive()}{drive()}}
+{\footnotesize\ttfamily def assignment.\+drive (\begin{DoxyParamCaption}\item[{}]{speed,  }\item[{}]{seconds }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}Function for setting a linear velocity
+
+Args: speed (int): the speed of the wheels
+  seconds (int): the time interval
+\end{DoxyVerb}
+ \mbox{\Hypertarget{namespaceassignment_a364af5d38654c38291bfffc3871c8a67}\label{namespaceassignment_a364af5d38654c38291bfffc3871c8a67}} 
+\index{assignment@{assignment}!drive\_safely@{drive\_safely}}
+\index{drive\_safely@{drive\_safely}!assignment@{assignment}}
+\doxysubsubsection{\texorpdfstring{drive\_safely()}{drive\_safely()}}
+{\footnotesize\ttfamily def assignment.\+drive\+\_\+safely (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}Function to drive in a "safe" way the robot.
+
+It is call in the main function to guide the robot through the circuit
+avoiding collision with the golden tokens.
+It is retrieved the distances of the left, right and front wall with 
+respect to the robot.
+
+If it is near to right wall to a certain threshold, turn counter-clockwise.
+If it is near to left wall to a certain threshold, turn clockwise
+If it is in front of a wall control if it is a corner:
+if it is in a left corner, turn right of 90 degree
+If it is a right corner, turn left of 90 degree\end{DoxyVerb}
+ \mbox{\Hypertarget{namespaceassignment_ac14e6569325c1613b45935e5bfc43c15}\label{namespaceassignment_ac14e6569325c1613b45935e5bfc43c15}} 
+\index{assignment@{assignment}!find\_golden\_token@{find\_golden\_token}}
+\index{find\_golden\_token@{find\_golden\_token}!assignment@{assignment}}
+\doxysubsubsection{\texorpdfstring{find\_golden\_token()}{find\_golden\_token()}}
+{\footnotesize\ttfamily def assignment.\+find\+\_\+golden\+\_\+token (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}Function to find the closest golden token in a range of 15 degree in front of the robot
+
+Returns:
+dist (float): distance of the closest golden token (-1 if no golden token is detected)
+rot_y (float): angle between the robot and the golden token (-1 if no golden token is detected)
+\end{DoxyVerb}
+ \mbox{\Hypertarget{namespaceassignment_a3300ba47ab3de83b4c66c2234bb456c6}\label{namespaceassignment_a3300ba47ab3de83b4c66c2234bb456c6}} 
+\index{assignment@{assignment}!find\_left\_wall@{find\_left\_wall}}
+\index{find\_left\_wall@{find\_left\_wall}!assignment@{assignment}}
+\doxysubsubsection{\texorpdfstring{find\_left\_wall()}{find\_left\_wall()}}
+{\footnotesize\ttfamily def assignment.\+find\+\_\+left\+\_\+wall (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}Function to find the left golden tokens (sensors' range with a delta of 15 degree with repect to 90 degree)
+
+Returns:
+dist (float): distance of the closest golden token (-1 if no golden token is detected)
+rot_y (float): angle between the robot and the golden token (-1 if no golden token is detected)
+\end{DoxyVerb}
+ \mbox{\Hypertarget{namespaceassignment_a73cccb7e8a6845af27a1a9623c5fa137}\label{namespaceassignment_a73cccb7e8a6845af27a1a9623c5fa137}} 
+\index{assignment@{assignment}!find\_right\_wall@{find\_right\_wall}}
+\index{find\_right\_wall@{find\_right\_wall}!assignment@{assignment}}
+\doxysubsubsection{\texorpdfstring{find\_right\_wall()}{find\_right\_wall()}}
+{\footnotesize\ttfamily def assignment.\+find\+\_\+right\+\_\+wall (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}Function to find the right golden tokens (sensors' range with a delta of 15 degree with respect to 90)
+
+Returns:
+dist (float): distance of the closest golden token (-1 if no golden token is detected)
+rot_y (float): angle between the robot and the golden token (-1 if no golden token is detected)
+\end{DoxyVerb}
+ \mbox{\Hypertarget{namespaceassignment_aed9209d15cc296657fbbdef6941386b6}\label{namespaceassignment_aed9209d15cc296657fbbdef6941386b6}} 
+\index{assignment@{assignment}!find\_silver\_token@{find\_silver\_token}}
+\index{find\_silver\_token@{find\_silver\_token}!assignment@{assignment}}
+\doxysubsubsection{\texorpdfstring{find\_silver\_token()}{find\_silver\_token()}}
+{\footnotesize\ttfamily def assignment.\+find\+\_\+silver\+\_\+token (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}Function to find the closest silver token in a range vision of 180 degree 
+and in absence of golden boxes in the middle, a sort of clear path,
+checked with clear_way(dist, rot_y)
+
+Returns:
+dist (float): distance of the closest silver token (-1 if no silver token is detected)
+rot_y (float): angle between the robot and the silver token (-1 if no silver token is detected)
+\end{DoxyVerb}
+ \mbox{\Hypertarget{namespaceassignment_afdd9349189dc0608a633c33c1ba17da8}\label{namespaceassignment_afdd9349189dc0608a633c33c1ba17da8}} 
+\index{assignment@{assignment}!turn@{turn}}
+\index{turn@{turn}!assignment@{assignment}}
+\doxysubsubsection{\texorpdfstring{turn()}{turn()}}
+{\footnotesize\ttfamily def assignment.\+turn (\begin{DoxyParamCaption}\item[{}]{speed,  }\item[{}]{seconds }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}Function for setting an angular velocity
+
+Args: speed (int): the speed of the wheels
+  seconds (int): the time interval
+\end{DoxyVerb}
+ 
+
+\doxysubsection{Variable Documentation}
+\mbox{\Hypertarget{namespaceassignment_aa8c1c156d2b500728d9bcf126bee8418}\label{namespaceassignment_aa8c1c156d2b500728d9bcf126bee8418}} 
+\index{assignment@{assignment}!a\_th@{a\_th}}
+\index{a\_th@{a\_th}!assignment@{assignment}}
+\doxysubsubsection{\texorpdfstring{a\_th}{a\_th}}
+{\footnotesize\ttfamily float assignment.\+a\+\_\+th = 2.\+0}
+
+\mbox{\Hypertarget{namespaceassignment_aff64926ea97a095c3bd1d0417bf65931}\label{namespaceassignment_aff64926ea97a095c3bd1d0417bf65931}} 
+\index{assignment@{assignment}!d\_th@{d\_th}}
+\index{d\_th@{d\_th}!assignment@{assignment}}
+\doxysubsubsection{\texorpdfstring{d\_th}{d\_th}}
+{\footnotesize\ttfamily float assignment.\+d\+\_\+th = 0.\+4}
+
+\mbox{\Hypertarget{namespaceassignment_a1884445294b0aedfe08836aa7ea19252}\label{namespaceassignment_a1884445294b0aedfe08836aa7ea19252}} 
+\index{assignment@{assignment}!dist@{dist}}
+\index{dist@{dist}!assignment@{assignment}}
+\doxysubsubsection{\texorpdfstring{dist}{dist}}
+{\footnotesize\ttfamily assignment.\+dist}
+
+
+
+Here it is computed the main function \# A while loop where the robot detects silver token in the arena and \# then drive in a carefully way to them. 
+
+\# Arguments passes numerically to the functions are chosen \# relative to the specific environment \# \mbox{\Hypertarget{namespaceassignment_a8874ef1f98c9cb3cd40f36277cc217fa}\label{namespaceassignment_a8874ef1f98c9cb3cd40f36277cc217fa}} 
+\index{assignment@{assignment}!R@{R}}
+\index{R@{R}!assignment@{assignment}}
+\doxysubsubsection{\texorpdfstring{R}{R}}
+{\footnotesize\ttfamily assignment.\+R = Robot()}
+
+\mbox{\Hypertarget{namespaceassignment_ad8f2e5095821dac3a3036183a747ed95}\label{namespaceassignment_ad8f2e5095821dac3a3036183a747ed95}} 
+\index{assignment@{assignment}!rot\_y@{rot\_y}}
+\index{rot\_y@{rot\_y}!assignment@{assignment}}
+\doxysubsubsection{\texorpdfstring{rot\_y}{rot\_y}}
+{\footnotesize\ttfamily assignment.\+rot\+\_\+y}
+
+\mbox{\Hypertarget{namespaceassignment_ae8928035517b725fcb555ce1fa8445df}\label{namespaceassignment_ae8928035517b725fcb555ce1fa8445df}} 
+\index{assignment@{assignment}!silver@{silver}}
+\index{silver@{silver}!assignment@{assignment}}
+\doxysubsubsection{\texorpdfstring{silver}{silver}}
+{\footnotesize\ttfamily bool assignment.\+silver = True}
+
